@@ -90,3 +90,20 @@ regrev=1
 rmmod brcmfmac_wcc brcmfmac && modprobe brcmffmac
 ```
 
+so far for 5GHz
+
+```
+boardflags3=0x40000108
+boardflags3=0x00000300
+boardflags3=0x00000303
+```
+
+so far for 2.4GHz
+
+```
+boardflags3=0x00000003
+```
+
+
+https://bugzilla.kernel.org/show_bug.cgi?id=193121#c74
+
