@@ -69,6 +69,8 @@ Download
 
 `https://bugzilla.kernel.org/attachment.cgi?id=285753` -> brcmfmac43602-pcie.txt
 
+copy to `/lib/firmware/brcm`
+
 Change the following:
 
 ```
