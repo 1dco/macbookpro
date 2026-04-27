@@ -1,6 +1,6 @@
 # Overview
 
-# Audio
+## Audio
 For Audio certain thing need to be done.
 
 Clone the Project here https://github.com/davidjo/snd_hda_macbookpro
@@ -35,3 +35,31 @@ git apply ../macbookpro/snd_hda_macbookpro.patch
 ./install.cirrus.driver.sh
 reboot
 ```
+
+## Wifi
+
+install iwd
+
+```
+sudo pacman -S iwd
+```
+
+set country to DE
+
+```
+sudo iw reg set DE
+```
+
+set the iwd as the backend of the networkmanager
+
+```
+sudo cat < EOF > /etc/NetworkManager/conf.d/iwd.conf
+[device]
+wifi.backend=iwd
+sudo systemctl enable --now iwd
+sudo systemctl stop wpa_supplicant
+sudo systemctl mask wpa_supplicant
+sudo systemctl restart NetworkManager
+```
+
+So far only works with 2.4 GHz, need to find out how to enable 5GHz
