@@ -113,3 +113,11 @@ boardflags3=0x00000003
 
 https://bugzilla.kernel.org/show_bug.cgi?id=193121#c74
 
+tested with files `brcmfmac43602-pcie-3.txt` 
+
+it seems it's possible to do 
+
+```
+boardflags3=0x00000303    ## 5GHZ
+boardflags3=0x00000003    ## 2.4GHz
+```
