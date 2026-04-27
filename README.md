@@ -101,7 +101,7 @@ so far for 5GHz
 ```
 boardflags3=0x40000108
 boardflags3=0x00000300
-boardflags3=0x00000303
+boardflags3=0x00000303    ## seems to be the fastest in speed
 ```
 
 so far for 2.4GHz
