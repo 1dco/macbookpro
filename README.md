@@ -86,5 +86,7 @@ ccode=0
 regrev=1
 ```
 
-
+```
+rmmod brcmfmac_wcc && rmmod brcmfmac && modprobe brcmffmac
+```
 
