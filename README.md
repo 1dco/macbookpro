@@ -87,6 +87,12 @@ regrev=1
 ```
 
 ```
+ccode=ALL ## this is also possible
+```
+
+can also be set to ALL
+
+```
 rmmod brcmfmac_wcc brcmfmac && modprobe brcmffmac
 ```
 
