@@ -121,3 +121,10 @@ it seems it's possible to do
 boardflags3=0x00000303    ## 5GHZ
 boardflags3=0x00000003    ## 2.4GHz
 ```
+
+Randomize Mac Address using macchanger
+
+```
+sudo macchanger -r wlan0
+```
+
