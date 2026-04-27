@@ -63,3 +63,26 @@ sudo systemctl restart NetworkManager
 ```
 
 So far only works with 2.4 GHz, need to find out how to enable 5GHz
+
+### enable 5GHz
+Download
+
+`https://bugzilla.kernel.org/attachment.cgi?id=285753` -> brcmfmac43602-pcie.txt
+
+Change the following:
+
+```
+- Changed the following lines:
+macaddr=xx:xx:xx:xx:xx:xx
+ccode=X3
+regrev=15
+
+to
+
+macaddr=00:90:4c:0d:f4:3e
+ccode=0
+regrev=1
+```
+
+
+
