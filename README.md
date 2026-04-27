@@ -87,6 +87,6 @@ regrev=1
 ```
 
 ```
-rmmod brcmfmac_wcc && rmmod brcmfmac && modprobe brcmffmac
+rmmod brcmfmac_wcc brcmfmac && modprobe brcmffmac
 ```
 
