@@ -1,0 +1,21 @@
+diff --git a/install.cirrus.driver.sh b/install.cirrus.driver.sh
+index 7c9e83f..3437dc4 100755
+--- a/install.cirrus.driver.sh
++++ b/install.cirrus.driver.sh
+@@ -299,12 +299,12 @@ popd > /dev/null
+ if [[ ! $dkms = true ]]; then
+
+        if [ $PATCH_CIRRUS = true ]; then
+-               make PATCH_CIRRUS=1
+-               make install PATCH_CIRRUS=1
++               make PATCH_CIRRUS=1 LLVM=1
++               make install PATCH_CIRRUS=1 LLVM=1
+
+        else
+-               make KERNELRELEASE=$UNAME
+-               make install KERNELRELEASE=$UNAME
++               make KERNELRELEASE=$UNAME LLVM=1
++               make install KERNELRELEASE=$UNAME LLVM=1
+
+        fi
+        echo -e "\ncontents of $update_dir/codecs/cirrus"
