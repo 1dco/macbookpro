@@ -128,3 +128,19 @@ Randomize Mac Address using macchanger
 sudo macchanger -r wlan0
 ```
 
+```
+## /etc/systemd/system/macspoof@.service
+Unit]
+Description=macchanger on %I
+Wants=network-pre.target
+Before=network-pre.target
+BindsTo=sys-subsystem-net-devices-%i.device
+After=sys-subsystem-net-devices-%i.device
+
+[Service]
+ExecStart=/usr/bin/macchanger -e %I
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target
+```
