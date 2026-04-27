@@ -26,3 +26,12 @@ if [[ ! $dkms = true ]]; then
 fi
 ```
 
+```
+git clone https://github.com/davidjo/snd_hda_macbookpro.git
+git clone https://github.com/1dco/macbookpro/
+cd snd_hda_macbookpro/
+git apply ../macbookpro/snd_hda_macbookpro.patch
+#run the following command as root or with sudo
+./install.cirrus.driver.sh
+reboot
+```
