@@ -122,6 +122,8 @@ boardflags3=0x00000303    ## 5GHZ
 boardflags3=0x00000003    ## 2.4GHz
 ```
 
+### MacSpoofing
+
 Randomize Mac Address using macchanger
 
 ```
@@ -144,3 +146,10 @@ Type=oneshot
 [Install]
 WantedBy=multi-user.target
 ```
+
+```
+sudo systemctl daemon-reload
+sudo systemctl enable --now macspoof@wlan0
+```
+
+## Touchbar
